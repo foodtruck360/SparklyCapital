@@ -1,27 +1,204 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
-<!-- above set at the top of the file will set     -->
-<!-- the browser's rendering engine into           -->
-<!-- "Quirks Mode". Replacing this declaration     -->
-<!-- with a "Standards Mode" doctype is supported, -->
-<!-- but may lead to some differences in layout.   -->
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Hello App Engine</title>
-  </head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <body>
-    <h1>Hello App Engine!</h1>
-	
-    <table>
-      <tr>
-        <td colspan="2" style="font-weight:bold;">Available Servlets:</td>        
-      </tr>
-      <tr>
-        <td><a href="sparklycapital">SparklyCapital</a></td>
-      </tr>
-    </table>
-  </body>
+    <title>foodtruck</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS for the 'Heroic Features' Template -->
+    <link href="css/heroic-features.css" rel="stylesheet">
+    
+     <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script>
+var map;
+function initialize() {
+  var mapOptions = {
+    zoom: 8,
+    center: new google.maps.LatLng(-34.397, 150.644)
+  };
+  map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.php">Start Bootstrap</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#about">About</a>
+                    </li>
+                    <li><a href="#services">Services</a>
+                    </li>
+                    <li><a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="container">
+
+        <div class="jumbotron hero-spacer">
+            <h1>A Warm Welcome!</h1>
+            <p>Cash flow section</p>
+            <p><a class="btn btn-primary btn-large">Call to action!</a>
+            </p>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Quick Wins</h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <div class="row text-center">
+
+            <div class="col-lg-12 col-md-6 hero-feature">
+            
+					<ul class="nav nav-pills">
+					  <li class="active"><a href="#popular" data-toggle="tab">June 22</a></li>
+					  <li><a href="#nonveg" data-toggle="tab">June 23</a></li>
+					  <li><a href="#veg" data-toggle="tab">June 24</a></li>
+					  <li><a href="#malabar" data-toggle="tab">June 25</a></li>
+
+					</ul>
+					<div class="tab-content">
+					<div class="tab-pane fade in active" id="popular">
+					  <div class="row">
+					  	<div class="col-sm-6 col-md-12">
+					  		<iframe frameborder=1 style='width:100%;height:300px' src='maps1.html'> </iframe>
+
+					  	</div>
+					  </div>
+					</div>
+				    <div class="tab-pane fade" id="nonveg">
+				    
+				    	<div class="row">
+						  <div class="col-sm-6 col-md-12">
+						    <div class="thumbnail">
+						      <img src="https://lh6.googleusercontent.com/-rD2GNwYWkx0/U1w0BMcnTUI/AAAAAAAAHJI/ewynKuQ1Uro/w300-h200-no/DSC_0495.JPG" class="img-responsive" alt="Responsive image">
+						      <div class="caption">
+						        <h4>Recommended Location</h4>
+						        <p>More Revenue </p>
+						        
+						        <div class="btn-group btn-group-justified blocks">
+						  		  <div class="btn-group">
+								    <button type="button" class="btn btn-primary">Love it</button>
+								  </div>
+								  <div class="btn-group">
+								    <button type="button" class="btn btn-info">Learn More</button>
+								  </div>
+								</div>
+						      </div>
+						    </div>
+						   </div>
+						  </div>
+				    
+				    </div> <!-- nonveg -->
+				    
+				    <div class="tab-pane fade" id="veg">
+				    
+				    </div> <!-- veg -->
+				    
+				    <div class="tab-pane fade" id="malabar">
+				    
+				    </div> <!-- malabar -->
+              
+            </div>
+
+            <div class="col-lg-12 col-md-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="http://placehold.it/800x500" alt="">
+                    <div class="caption">
+                        <h3>Feature Label</h3>
+                        <p>This would be a great spot to feature some brand new products!</p>
+                        <p><a href="#" class="btn btn-primary">Buy Now!</a>  <a href="#" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="http://placehold.it/800x500" alt="">
+                    <div class="caption">
+                        <h3>Feature Label</h3>
+                        <p>This would be a great spot to feature some brand new products!</p>
+                        <p><a href="#" class="btn btn-primary">Buy Now!</a>  <a href="#" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="http://placehold.it/800x500" alt="">
+                    <div class="caption">
+                        <h3>Feature Label</h3>
+                        <p>This would be a great spot to feature some brand new products!</p>
+                        <p><a href="#" class="btn btn-primary">Buy Now!</a>  <a href="#" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Company 2013</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+</body>
+
 </html>
