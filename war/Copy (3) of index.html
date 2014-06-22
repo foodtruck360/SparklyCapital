@@ -183,12 +183,13 @@ google.maps.event.addDomListener(window, 'load', initialize);
 					   <div class="row">
 					   <br> 
 					    <div class='col-sm-6'>
-					            <div class="panel panel-default">
-									  <div class="panel-heading">
-									    <h3 class="panel-title">Month Net Positive : $5000</h3>
-									  </div>
-									  
-								</div>
+					            <div class="form-group">
+					                <div class='input-group date' id='datetimepicker2'>
+					                    <input type='text' class="form-control" />
+					                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+					                    </span>
+					                </div>
+					            </div>
 					         </div>  
 						
 						   <div class='col-sm-6'>
@@ -253,20 +254,23 @@ google.maps.event.addDomListener(window, 'load', initialize);
 	<script>
 
 		var barChartData = {
-			labels : ["Week1","Week2","Week3","Week4","Week5","Week6","Week7"],
+			labels : ["January","February","March","April","May","June","July"],
 			datasets : [
 				{
 					fillColor : "rgba(220,220,220,0.5)",
 					strokeColor : "rgba(220,220,220,1)",
-					data : [1065,1059,-5090,1081,2056,2055,8140]
+					data : [65,59,90,81,56,55,40]
+				},
+				{
+					fillColor : "rgba(151,187,205,0.5)",
+					strokeColor : "rgba(151,187,205,1)",
+					data : [28,48,40,19,96,27,100]
 				}
 			]
 
 		}
 
-	//var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Bar(barChartData);
-		var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(barChartData);
-	//	new Chart(ctx).Line(data,options);
+	var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Bar(barChartData);
 
 	</script>    
     
@@ -289,20 +293,17 @@ google.maps.event.addDomListener(window, 'load', initialize);
             $("#datetimepicker1").on("dp.change",function (e) {
              var maphtml="<iframe frameborder=1 style='width:100%;height:300px' src='maps1.html?date=" + $('#datetimepicker1').data("DateTimePicker").getDate()  + "'> </iframe>";   
            //	 alert($('#datetimepicker1').data("DateTimePicker").getDate());
-           	// alert(maphtml);
+           //	 alert(maphtml);
            	 $('#mapsdiv').html(maphtml);
-           	 var date_date=""+$('#datetimepicker1').data("DateTimePicker").getDate();
-           	 alert(date_date);
            	 
            	 $.ajax({  
                  type: "GET",  
-                 url: "http://lit-ravine-7565.herokuapp.com/date="+date_date,
-               //  url: " http://lit-ravine-7565.herokuapp.com/date="+$('#datetimepicker1').data("DateTimePicker").getDate(),  
+                 url: "https://s3-us-west-2.amazonaws.com/sparklydata/sample.json?date="+$('#datetimepicker1').data("DateTimePicker").getDate(),  
                  dataType: "json",  
                  success: function(data){  
                    // we have the response  
                 //     alert(data.Suggestion_Location_Secondary.Position.Latitude);
-                   alert(data.Suggestion_Location_Primary.Weather);
+                //   alert(data.Suggestion_Location_Primary.Weather);
                 //   alert(data.Suggestion_Location_Primary.Event.Type);
             
                   

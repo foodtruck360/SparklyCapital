@@ -26,23 +26,6 @@
 		float: left;
 		width: 49.5%;
 		}
-		
-	  .navbar-brand {
-       height: 100%; 
-        padding: 0px;
-        margin-top: 5px; 
-       }
-       
-       .navbar-toggle {
-		padding: none;
-		}
-       
-       .img-responsive {
-
-		max-width: 30%;
-		display: a;
-
-		}
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <script>
@@ -76,38 +59,32 @@ google.maps.event.addDomListener(window, 'load', initialize);
     <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand logo-nav" href="index.html"> <img
-					src="images/sparkly_logo_name.png" class="center-block img-responsive"
-					> 
-				</a>
-<!--                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> -->
-<!--                     <span class="sr-only">Toggle navigation</span> -->
-<!--                     <span class="icon-bar"></span> -->
-<!--                     <span class="icon-bar"></span> -->
-<!--                     <span class="icon-bar"></span> -->
-<!--                 </button>  -->
-                
-<!--                 <a class="navbar-brand" href="index.php">Sparkly</a> -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.php">Sparkly</a>
             </div>
 
-<!--             Collect the nav links, forms, and other content for toggling -->
-<!--             <div class="collapse navbar-collapse navbar-ex1-collapse"> -->
-<!--                 <ul class="nav navbar-nav"> -->
-<!--                     <li><a href="#about">About</a> -->
-<!--                     </li> -->
-<!--                     <li><a href="#services">Services</a> -->
-<!--                     </li> -->
-<!--                     <li><a href="#contact">Contact</a> -->
-<!--                     </li> -->
-<!--                 </ul> -->
-<!--             </div> -->
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#about">About</a>
+                    </li>
+                    <li><a href="#services">Services</a>
+                    </li>
+                    <li><a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
     <hr>
     <div class="container">
-
    <br>
 
 <!--         <div class="row"> -->
@@ -161,7 +138,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
 							    <h3 class="panel-title">Event</h3>
 							  </div>
 							  <div class="panel-body">
-							    <img src="images/baseball-img.gif" class="img-responsive" alt="Responsive image"> 
 							    Ball Game
 							  </div>
 							</div>
@@ -172,7 +148,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 							    <h3 class="panel-title">Weather</h3>
 							  </div>
 							  <div class="panel-body">
-							    <img src="images/sunny-3.png" class="img-responsive" alt="Responsive image"> 
+							    Sunny
 							  </div>
 							</div>
 						</div>
@@ -183,38 +159,39 @@ google.maps.event.addDomListener(window, 'load', initialize);
 					   <div class="row">
 					   <br> 
 					    <div class='col-sm-6'>
-					            <div class="panel panel-default">
-									  <div class="panel-heading">
-									    <h3 class="panel-title">Month Net Positive : $5000</h3>
-									  </div>
-									  
-								</div>
+					            <div class="form-group">
+					                <div class='input-group date' id='datetimepicker2'>
+					                    <input type='text' class="form-control" />
+					                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+					                    </span>
+					                </div>
+					            </div>
 					         </div>  
 						
 						   <div class='col-sm-6'>
 					   		 <canvas id="canvas" height="450" width="600"></canvas>
 					   	   </div>
 					    
-					    <div class="col-xs-12 col-md-12">
+					    <div class="col-xs-6 col-md-6">
 						  	<div class="panel panel-default">
 							  <div class="panel-heading">
-							    <h3 class="panel-title">Action Point : Bridge your cashflow</h3>
+							    <h3 class="panel-title">Event</h3>
 							  </div>
 							  <div class="panel-body">
-							    <button type="button" class="btn btn-success btn-lg btn-block">Call Capital One</button>
+							    Ball Game
 							  </div>
 							</div>
 						</div>
-<!-- 						<div class="col-xs-6 col-md-6"> -->
-<!-- 						  	<div class="panel panel-default"> -->
-<!-- 							  <div class="panel-heading"> -->
-<!-- 							    <h3 class="panel-title">Weather</h3> -->
-<!-- 							  </div> -->
-<!-- 							  <div class="panel-body"> -->
-<!-- 							    <img src="images/sunny-3.png" class="img-responsive" alt="Responsive image">    -->
-<!-- 							  </div> -->
-<!-- 							</div> -->
-<!-- 						</div>  -->
+						<div class="col-xs-6 col-md-6">
+						  	<div class="panel panel-default">
+							  <div class="panel-heading">
+							    <h3 class="panel-title">Weather</h3>
+							  </div>
+							  <div class="panel-body">
+							    Sunny
+							  </div>
+							</div>
+						</div> 
 					</div>
 					
 					 </div>
@@ -234,7 +211,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Sparkly 2014</p>
+                    <p>Copyright &copy; Company 2013</p>
                 </div>
             </div>
         </footer>
@@ -253,20 +230,23 @@ google.maps.event.addDomListener(window, 'load', initialize);
 	<script>
 
 		var barChartData = {
-			labels : ["Week1","Week2","Week3","Week4","Week5","Week6","Week7"],
+			labels : ["January","February","March","April","May","June","July"],
 			datasets : [
 				{
 					fillColor : "rgba(220,220,220,0.5)",
 					strokeColor : "rgba(220,220,220,1)",
-					data : [1065,1059,-5090,1081,2056,2055,8140]
+					data : [65,59,90,81,56,55,40]
+				},
+				{
+					fillColor : "rgba(151,187,205,0.5)",
+					strokeColor : "rgba(151,187,205,1)",
+					data : [28,48,40,19,96,27,100]
 				}
 			]
 
 		}
 
-	//var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Bar(barChartData);
-		var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(barChartData);
-	//	new Chart(ctx).Line(data,options);
+	var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Bar(barChartData);
 
 	</script>    
     
@@ -289,20 +269,17 @@ google.maps.event.addDomListener(window, 'load', initialize);
             $("#datetimepicker1").on("dp.change",function (e) {
              var maphtml="<iframe frameborder=1 style='width:100%;height:300px' src='maps1.html?date=" + $('#datetimepicker1').data("DateTimePicker").getDate()  + "'> </iframe>";   
            //	 alert($('#datetimepicker1').data("DateTimePicker").getDate());
-           	// alert(maphtml);
+           //	 alert(maphtml);
            	 $('#mapsdiv').html(maphtml);
-           	 var date_date=""+$('#datetimepicker1').data("DateTimePicker").getDate();
-           	 alert(date_date);
            	 
            	 $.ajax({  
                  type: "GET",  
-                 url: "http://lit-ravine-7565.herokuapp.com/date="+date_date,
-               //  url: " http://lit-ravine-7565.herokuapp.com/date="+$('#datetimepicker1').data("DateTimePicker").getDate(),  
+                 url: "https://s3-us-west-2.amazonaws.com/sparklydata/sample.json?date="+$('#datetimepicker1').data("DateTimePicker").getDate(),  
                  dataType: "json",  
                  success: function(data){  
                    // we have the response  
-                //     alert(data.Suggestion_Location_Secondary.Position.Latitude);
-                   alert(data.Suggestion_Location_Primary.Weather);
+                     alert(data.Suggestion_Location_Secondary.Position.Latitude);
+                //   alert(data.Suggestion_Location_Primary.Weather);
                 //   alert(data.Suggestion_Location_Primary.Event.Type);
             
                   
