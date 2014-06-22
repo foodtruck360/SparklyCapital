@@ -292,7 +292,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
            	// alert(maphtml);
            	 $('#mapsdiv').html(maphtml);
            	 var date_date=""+$('#datetimepicker1').data("DateTimePicker").getDate();
-           	 alert(date_date);
+          // 	 alert(date_date);
            	 
            	 $.ajax({  
                  type: "GET",  
@@ -302,7 +302,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
                  success: function(data){  
                    // we have the response  
                 //     alert(data.Suggestion_Location_Secondary.Position.Latitude);
-                   alert(data.Suggestion_Location_Primary.Weather);
+               //    alert(data.Suggestion_Location_Primary.Weather);
                 //   alert(data.Suggestion_Location_Primary.Event.Type);
             
                   
